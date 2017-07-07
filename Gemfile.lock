@@ -113,6 +113,7 @@ GEM
     parallel (1.11.2)
     parser (2.4.0.0)
       ast (~> 2.2)
+    pg (0.21.0)
     powerpack (0.1.1)
     puma (3.8.2)
     rack (2.0.3)
@@ -236,6 +237,7 @@ DEPENDENCIES
   kaminari
   listen (~> 3.0.5)
   mysql2 (>= 0.3.18, < 0.5)
+  pg
   puma (~> 3.0)
   rails (~> 5.0.2)
   rails-i18n
