@@ -1,2 +1,8 @@
 <h1>キャンペーン編集</h1>
-<% #TODO %>
+<%= form_for @campaign do |f| %>
+  <%= render partial: 'campaigns/form', locals: { f: f } %>
+  <%= f.submit '登録', class: 'btn btn-primary' %>
+  <%= link_to "中止", campaigns_path, class: 'btn btn-default' %>
+  <%= link_to "削除", campaigns_path, method: :delete, data: { confirm: "削除しますか？一旦削除すると元には戻せません。"},
+      class: 'btn btn-link' %>
+<% end %>

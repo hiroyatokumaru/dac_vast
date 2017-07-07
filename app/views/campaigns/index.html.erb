@@ -1,2 +1,32 @@
 <h1>キャンペーン一覧</h1>
 <% #TODO %>
+<%= link_to "登録", new_campaign_path, class: "btn btn-default" %>
+
+<table class="table table-condensed table-hover">
+  <thead>
+    <tr>
+      <th>id</th>
+      <th>name</th>
+      <th>start</th>
+      <th>end</th>
+      <th>limit</th>
+      <th>movie</th>
+      <th>created</th>
+      <th>updated</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @campaigns.each do |campaign| %>
+      <tr>
+        <td><%= link_to campaign.id, edit_campaign_path(campaign) %></td>
+        <td><%= campaign.name %></td>
+        <td><%= campaign.start_at %></td>
+        <td><%= campaign.end_at %></td>
+        <td><%= campaign.limit_start %></td>
+        <td><%= campaign.movie_url %></td>
+        <td><%= campaign.created_at %></td>
+        <td><%= campaign.updated_at %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

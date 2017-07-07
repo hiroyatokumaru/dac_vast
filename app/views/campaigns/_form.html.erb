@@ -1,0 +1,41 @@
+<div class="form-group">
+  <%= f.label :name, class: 'col-sm-2 col-form-label' %>
+  <div class="col-sm-10">
+    <%= f.text_field :name, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :start_at, class: 'col-sm-2 col-form-label' %>
+  <div class="col-sm-10">
+    <%= f.text_field :start_at, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :end_at, class: 'col-sm-2 col-form-label' %>
+  <div class="col-sm-10">
+    <%= f.text_field :end_at, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :limit_start, class: 'col-sm-2 col-form-label' %>
+  <div class="col-sm-10">
+    <%= f.text_field :limit_start, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :movie_url, class: 'col-sm-2 col-form-label' %>
+  <div class="col-sm-10">
+    <%= f.text_field :movie_url, class: 'form-control' %>
+  </div>
+</div>
+
+<div class="form-group">
+  <%= f.label :cuepoints, class: 'col-sm-2 col-lg-2 col-form-label' %>
+  <div class="col-sm-10 col-lg-10">
+    <%= f.collection_check_boxes(:cuepoint_ids, Cuepoint.all, :id, :name) %>
+  </div>
+</div>

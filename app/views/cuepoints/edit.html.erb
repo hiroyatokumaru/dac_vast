@@ -1,2 +1,19 @@
 <h1>キューポイント編集</h1>
-<% #TODO %>
+<div class="row">
+  <div class="col-xs-6">
+    <%= form_for(@cuepoint) do |f| %>
+      <% render 'shared/error_messages', object: f.object %>
+      <div class="form-group">
+        <%= f.label :name, 'name' %>
+        <%= f.text_field :name, class: 'form-control' %>
+        <p>VAST URL <%= vast_url(@cuepoint) %> </p>
+      </div>
+
+      <%= f.submit '登録', class: 'btn btn-primary' %>
+      <%= link_to '削除', cuepoint_path(@cuepoint.id),
+                          method: :dalete,
+                          data: { confirm: '本当に削除してもよろしいですか？' }, 
+                          class: 'btn btn-danger' %>
+    <% end %>  
+  </div>
+</div>
