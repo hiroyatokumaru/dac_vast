@@ -10,8 +10,8 @@
       </div>
 
       <%= f.submit '登録', class: 'btn btn-primary' %>
-      <%= link_to '削除', cuepoint_path(@cuepoint.id),
-                          method: :dalete,
+      <%= link_to '削除', cuepoint_path,
+                          method: :delete,
                           data: { confirm: '本当に削除してもよろしいですか？' }, 
                           class: 'btn btn-danger' %>
     <% end %>  
